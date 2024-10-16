@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 
 # Load the trained model
-model = joblib.load('svm_model_model.pkl')
+model = joblib.load('svm_model.pkl')
 
 # Streamlit app title
 st.title('Diabetes Prediction App')
