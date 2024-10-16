@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 
 # Load the trained model
-model = joblib.load('diabetes_model.pkl')
+model = joblib.load('svm_model_model.pkl')
 
 # Streamlit app title
 st.title('Diabetes Prediction App')
@@ -22,7 +22,7 @@ age = st.number_input('Age', min_value=0)
 if st.button('Predict'):
     new_data = np.array([[glucose, blood_pressure, skin_thickness, insulin, bmi, diabetes_pedigree, age]])
     prediction = model.predict(new_data)
-    
+
     # Display the prediction
     if prediction[0] == 1:
         st.write('Predicted Class: Diabetic')
